@@ -1,22 +1,11 @@
-import axios from 'axios';
-import React, { useEffect } from 'react'
-import { API_URL } from './component/common/constant';
 import Header from './component/common/Header';
+import usePokeApiHandler from './component/common/utils/hooks/usePokeApiHandler';
+import CardPaginate from './component/features/pagination.component';
 
 const App = () => {
 
+const { onPrevious, onNext, length, start, end } = usePokeApiHandler();
 
-useEffect(()=>{
-
-		async function fetch() {
-			const res = await axios.get(`${API_URL}/pokemon`);
-
-			console.log(res.data.results)
-		}
-
-	fetch();
-
-},[])
 
 
   return (
@@ -25,8 +14,12 @@ useEffect(()=>{
 				<Header />
 			</div>
 			<div>
-				Poke api
-				card contetn here
+				<div className='flex flex-col items-center justify-center'>
+					
+					<CardPaginate start={start} end={end} onPrevious={onPrevious} onNext={onNext} length={length} />
+				</div>
+
+				
 			</div>
 			<div>
 				<Header />
