@@ -1,4 +1,3 @@
-## Setup for Pokemon Pagination Challenge
 
 <img style='border-radius:50%' src='./src/assets/poke.png' width='150' height='150'>
 
