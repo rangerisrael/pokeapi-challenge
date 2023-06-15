@@ -5,7 +5,7 @@ const CardPaginate = ({ onPrevious, onNext, length, start, end }: Pagination) =>
 
 
 	return (
-		<div className='flex flex-row gap-2 items-center justify-center mb-10'>
+		<div className='flex flex-row gap-10 items-center justify-center mb-10'>
 			<button
 				disabled={end === 10}
 				style={{
@@ -17,8 +17,9 @@ const CardPaginate = ({ onPrevious, onNext, length, start, end }: Pagination) =>
 				<span className='text-lg'> ← </span>Previous
 			</button>
 
-			<span data-testid='results' className='mt-2'>
+			<span style={{fontSize:'16px'}} data-testid='results' className='mt-1'>
 				Show results ({start + 1} - {end})
+				<hr style={{ height: '2px', border: 'none', color: '#4c566a', backgroundColor: '#4c566a' }} />
 			</span>
 
 			<button
