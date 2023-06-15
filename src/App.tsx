@@ -4,15 +4,16 @@ import CardPaginate from './component/features/pagination.component';
 import PokeLogo from './assets/poke.png';
 import Image from './component/common/Image';
 import DisplaySpecies from './component/features/display-all-species.component';
+import GetSpecialSkills from './component/features/get-species-special-skills-result';
 
 const App = () => {
 
-const { onPrevious, onNext, length, start, end } = usePokeApiHandler();
+const { onPrevious, onNext,onClickHandler, length, start, end } = usePokeApiHandler();
 
 
 
   return (
-		<div style={{ display: 'grid', gridTemplateRows: '10vh calc(100vh - auto) 10vh', rowGap: '5rem' }}>
+		<div style={{ display: 'grid', gridTemplateRows: '10vh calc(100vh - auto) 10vh' }}>
 			<div>
 				<Header />
 			</div>
@@ -21,13 +22,17 @@ const { onPrevious, onNext, length, start, end } = usePokeApiHandler();
 					<Image className='' src={PokeLogo} alt='Logo' width={150} height={150} />
 					<CardPaginate start={start} end={end} onPrevious={onPrevious} onNext={onNext} length={length} />
 				</div>
-				<DisplaySpecies start={start} end={end} onClickHandler={()=> undefined} />
+
+				<DisplaySpecies start={start} end={end} onClickHandler={onClickHandler} />
+
+				<div className='flex flex-row justify-center items-center'>
+					<GetSpecialSkills />
+				</div>
 			</div>
-			<div>
+			<div className='mt-[5rem]'>
 				<Header />
 			</div>
 		</div>
-		
 	);
 }
 

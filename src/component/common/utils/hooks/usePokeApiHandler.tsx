@@ -3,12 +3,13 @@ import React, { useEffect, useState } from 'react'
 import { API_URL } from '../../constant';
 import { PokeApi } from '../../types';
 import { PokeResults, PokemonResponseUrl } from '../../types/api-interface';
-import { usePokeApiState } from './useGlobalState';
+import { usePokeApiState, usePokeResultByItself } from './useGlobalState';
 
 const usePokeApiHandler = () => {
 
   
 	const [pokeApi, setPokeApi] = usePokeApiState();
+	const [, setResult] = usePokeResultByItself();
 
 	const cloneSpecies: PokeApi[] = [];
 	let thumbnail: string;
@@ -71,10 +72,14 @@ const onPrevious = () => {
 };
 
 
+const onClickHandler = (item: PokeApi) => {
+	window.my_modal_2.showModal();
+
+	setResult(item);
+};
 
 
-
-  return { onPrevious, onNext, length, start, end, pokeApi };
+  return { onPrevious, onNext,onClickHandler, length, start, end, pokeApi };
 }
 
 export default usePokeApiHandler;
