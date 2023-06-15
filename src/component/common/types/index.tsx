@@ -6,8 +6,13 @@ type Pagination = {
 	onNext?: () => void;
 };
 
- type PokeApi = { id: number; species: string; src: string; type: Types[]; stats?: Stats[] };
+type PokeApi = { id: number; species: string; src: string; type: Types[]; stats?: Stats[] };
 
 
+  type CardType = {
+		onClickHandler: (item: PokeApi) => void;
+		item: PokeApi;
+	};
 
-export type { Pagination, PokeApi };
+
+export type { Pagination, PokeApi, CardType };
