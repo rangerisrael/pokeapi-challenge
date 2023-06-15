@@ -54,9 +54,9 @@ yarn build
 
  testing are usually placed into the `test` or, less commonly, into the `spec` or `tests` folder.
 
-  .
-    ├────────────────────────────
-    ├   └──unit-testing                    # Test files (`.test`)
+  
+    ├───────────────────────
+    └──unit-testing                Test files (`.test`)
     │   └── test-component         pokemon list item for getting value to test if its response working correctly      
     │   ├── pagination             test related to pagination (previous,show,next)
     │   ├── display all species    test for getting length for pokemon list items
@@ -65,6 +65,6 @@ yarn build
     │   └── stats                  test for getting api response for stats attributes and value
     │   └── card                   test to make sure card species component working correctly and return match data
     │   └── api                    test to make sure if its api response return or not
-    └────────────────────────────
+    └────────────────
 
 
