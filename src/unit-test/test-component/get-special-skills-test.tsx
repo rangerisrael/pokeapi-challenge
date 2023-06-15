@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { API_URL } from '../../component/common/constant';
-import { Stats } from '../../component/types';
+import { Stats } from '../../component/common/types/index';
 
 export const PokeApiSpecialSkills = () => {
 	const [pokeApi, setPokeApi] = useState<Stats[]>([]);

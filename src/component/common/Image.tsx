@@ -1,5 +1,5 @@
-import React from 'react'
-import { ImageType } from '../types';
+import { ImageType } from "./types/index";
+
 
 const Image = ({ ...props }: ImageType) => {
 	return <img {...props} />;
