@@ -68,5 +68,5 @@ yarn build
 
 
 ## OUTPUT
-<img style='border-radius:50%' src='./src/assets/pokemon-result.PNG' width='100%' height='100%'>
+<a style='text-decoration:none;color:#000000' href='https://pokemon-challenge-gamma.vercel.app/' targer='blank'><img style='border-radius:50%' src='./src/assets/pokemon-result.PNG' width='100%' height='100%'></a>
 <img style='border-radius:50%' src='./src/assets/test-result.PNG' width='100%' height='100%'>
