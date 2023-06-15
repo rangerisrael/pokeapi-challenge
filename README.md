@@ -56,7 +56,7 @@ yarn build
 
   
     ├───────────────────────
-    └──unit-testing                Test files (`.test`)
+    │   └── unit-testing                Test files (`.test`)
     │   └── test-component         pokemon list item for getting value to test if its response working correctly      
     │   ├── pagination             test related to pagination (previous,show,next)
     │   ├── display all species    test for getting length for pokemon list items
